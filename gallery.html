@@ -15,7 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="#" onclick="openContact()">Contact</a></li>
+        <li><a href="#" id="openContact">Contact</a></li>
     </ul>
 </nav>
 
@@ -57,20 +57,20 @@
 
 <!-- SIDE CONTACT PANEL -->
 <div class="contact-panel" id="contactPanel">
-    <span class="close-btn" onclick="closeContact()">&times;</span>
+    <span class="close-btn" id="closeContact">&times;</span>
     <h2>Contact Me</h2>
-
-    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+    
+    <form action="mailto:villarealmarcosjoaquin44@gmail.com" method="POST" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
-
+    
     <div class="social-logos">
-        <img src="facebook.png" alt="Facebook">
-        <img src="instagram.png" alt="Instagram">
-        <img src="tiktok.png" alt="Tiktok">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/tiktok.png" alt="Tiktok">
     </div>
 </div>
 

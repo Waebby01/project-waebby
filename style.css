@@ -26,7 +26,7 @@ body{
     overflow-x:hidden;
 }
 
-/* ================= NAV ================= */
+/* ================= NAVIGATION ================= */
 nav{
     position:sticky;
     top:0;
@@ -78,7 +78,7 @@ nav a:hover::after{
     width:100%;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO SECTION ================= */
 .hero-section{
     min-height:90vh;
     display:flex;
@@ -180,74 +180,7 @@ nav a:hover::after{
     transform:scale(1.08);
 }
 
-/* ================= CONTACT PANEL ================= */
-.contact-panel{
-    position:fixed;
-    top:0;
-    right:-400px;
-    width:380px;
-    height:100vh;
-    background:#000;
-    padding:40px 25px;
-    transition:.4s;
-    z-index:2000;
-}
-
-.contact-panel.active{
-    right:0;
-}
-
-.close-btn{
-    font-size:28px;
-    cursor:pointer;
-    float:right;
-}
-
-.contact-panel form input,
-.contact-panel form textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    background:#1a1a1a;
-    border:1px solid #333;
-    border-radius:8px;
-    color:#fff;
-}
-
-.contact-panel form button{
-    width:100%;
-    padding:12px;
-    background:var(--accent);
-    border:none;
-    border-radius:30px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-/* SOCIAL ICONS CIRCLE */
-.social-logos{
-    display:flex;
-    justify-content:space-around;
-    margin-top:30px;
-}
-
-.social-logos img{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    padding:10px;
-    background:#111;
-    border:2px solid var(--border);
-    transition:.3s;
-}
-
-.social-logos img:hover{
-    border:2px solid var(--accent);
-    box-shadow:0 0 20px var(--accent-glow);
-    transform:scale(1.1);
-}
-
-/* ================= ABOUT ================= */
+/* ================= ABOUT SECTION ================= */
 .about-section{
     display:flex;
     align-items:center;
@@ -308,6 +241,89 @@ nav a:hover::after{
 
 .about-card h3{
     color:var(--accent);
+}
+
+/* ================= CONTACT PANEL ================= */
+.contact-panel{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:380px;
+    height:100vh;
+    backdrop-filter:blur(20px);
+    background:rgba(0,0,0,0.92);
+    padding:40px 25px;
+    box-shadow:-10px 0 40px #000, 0 0 50px var(--accent-glow);
+    transition:0.5s ease;
+    z-index:2000;
+    overflow-y:auto;
+    border-left:3px solid var(--accent);
+}
+
+.contact-panel.active{
+    right:0;
+    animation:slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from { right:-400px; opacity:0; }
+    to { right:0; opacity:1; }
+}
+
+.close-btn{
+    font-size:28px;
+    cursor:pointer;
+    float:right;
+}
+
+/* FORM ELEMENTS */
+.contact-panel form input,
+.contact-panel form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#1a1a1a;
+    border:1px solid #333;
+    border-radius:8px;
+    color:#fff;
+}
+
+.contact-panel form button{
+    width:100%;
+    padding:12px;
+    background:var(--accent);
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-panel form button:hover{
+    box-shadow:0 0 20px var(--accent-glow);
+}
+
+/* SOCIAL ICONS */
+.social-logos{
+    display:flex;
+    justify-content:space-around;
+    margin-top:30px;
+}
+
+.social-logos img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    padding:10px;
+    background:#111;
+    border:2px solid var(--border);
+    transition:.3s;
+}
+
+.social-logos img:hover{
+    border:2px solid var(--accent);
+    box-shadow:0 0 25px var(--accent-glow);
+    transform:scale(1.1);
 }
 
 /* ================= RESPONSIVE ================= */

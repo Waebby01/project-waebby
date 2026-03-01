@@ -15,7 +15,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#" onclick="openContact()">Contact</a></li>
+        <li><a href="#" id="openContact">Contact</a></li>
     </ul>
 </nav>
 
@@ -30,8 +30,9 @@
 
         <p>
             Hii, ako nga pala si <b>Marcos Joaquin B. Villareal</b>, isang ICT student na nangangarap maging
-            isang malupet na <b>mekaniko</b>. hindi related diba? ewan ko din bat ako nag ict pero na e enjoy ko naman mag code also mahilig akong matulog, basketball, kumain and mag explore ng mga bagong bagay
+            isang malupet na <b>mekaniko</b>. hindi related diba? ewan ko din bat ako nag ICT pero na e enjoy ko naman mag code also mahilig akong matulog, basketball, kumain and mag explore ng mga bagong bagay
             habang naka focus sa pansariling improvement <b>:p</b>.
+        </p>
 
         <div class="about-cards">
 
@@ -54,6 +55,25 @@
     </div>
 
 </section>
+
+<!-- SIDE CONTACT PANEL -->
+<div class="contact-panel" id="contactPanel">
+    <span class="close-btn" id="closeContact" onclick="closeContact()">&times;</span>
+    <h2>Contact Me</h2>
+
+    <form action="mailto:villarealmarcosjoaquin44@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-logos">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/tiktok.png" alt="Tiktok">
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>

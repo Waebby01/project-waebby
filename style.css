@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ================= ROOT VARIABLES ================= */
+/* ================= ROOT ================= */
 :root{
-    --bg:#0d0d0d;
-    --card:#1a1a1a;
-    --accent:#ff9000;
-    --accent-soft:#ff900020;
-    --accent-glow:#ff900040;
-    --text-light:#bbbbbb;
-    --border:#222;
+    --bg:#0f0f0f;
+    --card:#181818;
+    --accent:#ff9900;
+    --accent-strong:#ff6a00;
+    --accent-soft:#ff990020;
+    --accent-glow:#ff990050;
+    --text-light:#bdbdbd;
+    --border:#262626;
 }
 
-/* ================= GLOBAL RESET ================= */
+/* ================= RESET ================= */
 *{
     margin:0;
     padding:0;
@@ -23,20 +24,14 @@ body{
     background:var(--bg);
     color:#fff;
     overflow-x:hidden;
-    animation: fadeIn 1s ease-in-out;
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-/* ================= NAVIGATION ================= */
+/* ================= NAV ================= */
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#111;
+    background:#000;
     border-bottom:1px solid var(--border);
     padding:20px 40px;
     display:flex;
@@ -46,7 +41,8 @@ nav{
 
 nav h1{
     font-family:'Rubik Mono One', sans-serif;
-    font-size:1.2rem;
+    font-size:1.1rem;
+    letter-spacing:2px;
 }
 
 nav ul{
@@ -58,14 +54,31 @@ nav ul{
 nav a{
     text-decoration:none;
     color:#fff;
-    transition:0.3s ease;
+    font-weight:600;
+    position:relative;
+    transition:.3s;
 }
 
 nav a:hover{
     color:var(--accent);
 }
 
-/* ================= HERO SECTION ================= */
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:3px;
+    background:var(--accent);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* ================= HERO ================= */
 .hero-section{
     min-height:90vh;
     display:flex;
@@ -73,19 +86,21 @@ nav a:hover{
     justify-content:space-between;
     padding:80px 10%;
     gap:50px;
-}
-
-.hero-left{
-    flex:1;
+    background:linear-gradient(to right,#0f0f0f,#141414);
 }
 
 .hero-left h2{
-    font-size:2.5rem;
+    font-size:2.6rem;
     font-family:'Rubik Mono One', sans-serif;
 }
 
-.hero-left span{
+.hero-left h2 span{
     color:var(--accent);
+}
+
+.hero-left h3{
+    color:var(--accent);
+    margin:15px 0;
 }
 
 .hero-left p{
@@ -102,27 +117,29 @@ nav a:hover{
     border-radius:40px;
     font-weight:600;
     text-decoration:none;
-    transition:0.3s ease;
+    transition:.3s;
+    box-shadow:0 0 15px var(--accent-glow);
 }
 
 .hero-btn:hover{
+    transform:translateY(-3px);
     box-shadow:0 0 25px var(--accent-glow);
 }
 
-/* HERO IMAGE */
+/* HERO IMAGE CIRCLE */
 .hero-right{
-    flex:1;
     display:flex;
     justify-content:center;
 }
 
 .hero-right img{
-    width:350px;
-    max-width:100%;
-    border-radius:20px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
     object-fit:cover;
-    box-shadow:0 20px 50px #00000080;
-    transition:0.4s ease;
+    border:6px solid var(--accent);
+    box-shadow:0 0 50px var(--accent-glow);
+    transition:.4s;
 }
 
 .hero-right img:hover{
@@ -134,48 +151,46 @@ nav a:hover{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
+    padding:60px 10%;
 }
 
 .gallery-card{
-    position:relative;
     overflow:hidden;
     border-radius:15px;
-    background:var(--card);
+    background:#000;
     aspect-ratio:1/1;
-    cursor:pointer;
     border:1px solid var(--border);
-    transition:0.4s ease;
+    transition:.4s;
 }
 
 .gallery-card img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:0.5s ease;
+    transition:.4s;
 }
 
 .gallery-card:hover{
+    transform:translateY(-8px);
     border:1px solid var(--accent);
-    box-shadow:0 0 25px var(--accent-glow);
+    box-shadow:0 15px 40px var(--accent-glow);
 }
 
 .gallery-card:hover img{
     transform:scale(1.08);
 }
 
-/* ================= SIDE CONTACT PANEL ================= */
+/* ================= CONTACT PANEL ================= */
 .contact-panel{
     position:fixed;
     top:0;
     right:-400px;
-    width:350px;
+    width:380px;
     height:100vh;
-    background:#111;
+    background:#000;
     padding:40px 25px;
-    box-shadow:-10px 0 30px #00000080;
-    transition:0.5s ease;
+    transition:.4s;
     z-index:2000;
-    overflow-y:auto;
 }
 
 .contact-panel.active{
@@ -209,11 +224,7 @@ nav a:hover{
     cursor:pointer;
 }
 
-.contact-panel form button:hover{
-    box-shadow:0 0 20px var(--accent-glow);
-}
-
-/* ================= SOCIAL LOGOS ================= */
+/* SOCIAL ICONS CIRCLE */
 .social-logos{
     display:flex;
     justify-content:space-around;
@@ -221,40 +232,91 @@ nav a:hover{
 }
 
 .social-logos img{
-    width:45px;
-    height:45px;
-    object-fit:contain;
-    transition:0.3s ease;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    padding:10px;
+    background:#111;
+    border:2px solid var(--border);
+    transition:.3s;
 }
 
 .social-logos img:hover{
+    border:2px solid var(--accent);
+    box-shadow:0 0 20px var(--accent-glow);
     transform:scale(1.1);
 }
 
-/* ================= FADE IN ================= */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ================= ABOUT ================= */
+.about-section{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    padding:100px 10%;
+}
+
+.about-left{
+    display:flex;
+    justify-content:center;
+}
+
+.about-photo{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid var(--accent);
+    box-shadow:0 0 40px var(--accent-glow);
+    transition:.4s;
+}
+
+.about-photo:hover{
+    transform:scale(1.05);
+}
+
+.about-right h2{
+    font-family:'Rubik Mono One', sans-serif;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.about-right p{
+    color:var(--text-light);
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.about-card{
+    background:#141414;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid var(--border);
+    transition:.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-6px);
+    border:1px solid var(--accent);
+    box-shadow:0 10px 30px var(--accent-glow);
+}
+
+.about-card h3{
+    color:var(--accent);
 }
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:768px){
+
     nav{
         flex-direction:column;
         gap:15px;
         text-align:center;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
     }
 
     .hero-section{
@@ -263,7 +325,17 @@ nav a:hover{
     }
 
     .hero-right img{
-        width:280px;
+        width:240px;
+        height:240px;
         margin-top:30px;
+    }
+
+    .about-section{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contact-panel{
+        width:100%;
     }
 }

@@ -15,36 +15,34 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#" onclick="openContact()">Contact</a></li>
+        <li><a href="#" id="openContact">Contact</a></li>
     </ul>
 </nav>
 
 <section class="hero-section">
     <div class="hero-left">
-        <h2>Hi, Ako si <span> Marcos Joaquin</span></h2>
-        <h3>Stupedyante | Kupal | Halimaw </h3>
+        <h2>Hi, Ako si <span>Marcos Joaquin</span></h2>
+        <h3>Stupedyante | Kupal | Halimaw</h3>
         <p>
-            Welcome saking personal portfolio. Kamusta? May dalawang anak nag susumikap para sa anak.
-             
+            Welcome sa aking personal portfolio. Salamat sa pagbisita!
         </p>
 
         <a href="about.html" class="hero-btn">
-            Kilalanin Pako →
+            Kilalanin Pa Ako →
         </a>
     </div>
 
     <div class="hero-right">
-        <img src="/test1.jpeg"alt="My Photo">
+        <img src="/Messenger_creation_9E57051B-96A9-459A-ABD6-D016B5238A3E.jpeg" alt="My Photo">
     </div>
 </section>
-<script src="script.js"></script>
 
 <!-- SIDE CONTACT PANEL -->
 <div class="contact-panel" id="contactPanel">
-    <span class="close-btn" onclick="closeContact()">&times;</span>
+    <span class="close-btn" id="closeContact">&times;</span>
     <h2>Contact Me</h2>
 
-    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+    <form action="mailto:villarealmarcosjoaquin44@gmail.com" method="POST" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
@@ -52,10 +50,13 @@
     </form>
 
     <div class="social-logos">
-        <img src="facebook.png" alt="">
-        <img src="instagram.png" alt="">
-        <img src="tiktok.png" alt="">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/instagram.png" alt="Instagram">
+        <img src="images/tiktok.png" alt="Tiktok">
     </div>
 </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

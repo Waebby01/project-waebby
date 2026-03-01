@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Waebby | Portfolio </title>
+<title>Waebby | Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,43 +15,63 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" onclick="openContact()">Contact</a></li>
     </ul>
 </nav>
 
 <section class="gallery-section">
-    <h1 class="gallery-title">My Photo Gallery</h1>
+    <h1 class="gallery-title">Lagayan ng Alala</h1>
 
     <div class="gallery-grid">
         <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 1">
+            <img src="test1.jpeg" alt="Photo 1">
         </div>
 
         <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 2">
+            <img src="test1.jpeg" alt="Photo 2">
         </div>
 
         <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 3">
+            <img src="test1.jpeg" alt="Photo 3">
         </div>
 
         <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 4">
+            <img src="test1.jpeg" alt="Photo 4">
         </div>
-                <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 5">
-        </div>
+
         <div class="gallery-card">
-            <img src="/test1.jpeg" alt="Photo 4">
+            <img src="test1.jpeg" alt="Photo 5">
         </div>
-        
+
+        <div class="gallery-card">
+            <img src="test1.jpeg" alt="Photo 6">
+        </div>
     </div>
 </section>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
+    <span class="close" onclick="closeLightbox()">&times;</span>
     <img class="lightbox-img" id="lightbox-img" alt="">
+</div>
+
+<!-- SIDE CONTACT PANEL -->
+<div class="contact-panel" id="contactPanel">
+    <span class="close-btn" onclick="closeContact()">&times;</span>
+    <h2>Contact Me</h2>
+
+    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-logos">
+        <img src="facebook.png" alt="Facebook">
+        <img src="instagram.png" alt="Instagram">
+        <img src="tiktok.png" alt="Tiktok">
+    </div>
 </div>
 
 <script src="script.js"></script>

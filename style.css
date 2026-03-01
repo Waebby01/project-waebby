@@ -1,10 +1,6 @@
-/* hoogl font */
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Poppins:wght@300;400;600;700&display=swap');
 
-
-/* ==================================================
-   ROOT VARIABLES
-================================================== */
+/* ================= ROOT VARIABLES ================= */
 :root{
     --bg:#0d0d0d;
     --card:#1a1a1a;
@@ -15,10 +11,7 @@
     --border:#222;
 }
 
-
-/* ==================================================
-   GLOBAL RESET
-================================================== */
+/* ================= GLOBAL RESET ================= */
 *{
     margin:0;
     padding:0;
@@ -30,10 +23,7 @@ body{
     background:var(--bg);
     color:#fff;
     overflow-x:hidden;
-}
-
-section{
-    padding:80px 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .container{
@@ -41,10 +31,7 @@ section{
     margin:auto;
 }
 
-
-/* ==================================================
-   NAVIGATION
-================================================== */
+/* ================= NAVIGATION ================= */
 nav{
     position:sticky;
     top:0;
@@ -52,7 +39,6 @@ nav{
     background:#111;
     border-bottom:1px solid var(--border);
     padding:20px 40px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -63,19 +49,9 @@ nav h1{
     font-size:1.2rem;
 }
 
-nav span{
-    background:var(--accent);
-    color:#000;
-    padding:3px 8px;
-    border-radius:4px;
-}
-
 nav ul{
     display:flex;
     gap:25px;
-}
-
-nav ul li{
     list-style:none;
 }
 
@@ -89,337 +65,7 @@ nav a:hover{
     color:var(--accent);
 }
 
-
-/* ==================================================
-   HERO SECTION
-================================================== */
-.hero{
-    text-align:center;
-    padding:120px 20px 80px;
-}
-
-.hero h2{
-    font-family:'Rubik Mono One', sans-serif;
-    font-size:clamp(2rem,5vw,3rem);
-}
-
-.hero p{
-    color:var(--text-light);
-    margin-top:15px;
-}
-
-
-/* ==================================================
-   BUTTON STYLE
-================================================== */
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
-    border:2px solid var(--accent);
-    color:var(--accent);
-    border-radius:40px;
-    font-weight:600;
-    transition:0.3s ease;
-}
-
-.btn:hover{
-    background:var(--accent);
-    color:#000;
-    box-shadow:0 0 20px var(--accent-glow);
-}
-
-
-/* ==================================================
-   GRID & CARDS
-================================================== */
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:var(--card);
-    padding:25px;
-    border-radius:15px;
-    border:1px solid var(--border);
-    transition:0.4s ease;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border:1px solid var(--accent);
-    box-shadow:0 15px 30px var(--accent-glow);
-}
-
-.card h3{
-    color:var(--accent);
-    margin-bottom:10px;
-}
-
-.card p{
-    color:var(--text-light);
-}
-
-
-/* ==================================================
-   CONTACT SECTION DESIGN
-================================================== */
-.contact-section{
-    text-align:center;
-}
-
-.contact-box{
-    max-width:650px;
-    margin:auto;
-    background:linear-gradient(145deg,#1a1a1a,#141414);
-    padding:40px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    box-shadow:0 10px 30px #00000070;
-}
-
-.contact-box h2{
-    font-family:'Rubik Mono One', sans-serif;
-    margin-bottom:20px;
-}
-
-.contact-box input,
-.contact-box textarea{
-    width:100%;
-    padding:14px;
-    margin:12px 0;
-    background:#111;
-    border:1px solid #333;
-    border-radius:8px;
-    color:#fff;
-    font-size:0.95rem;
-    transition:0.3s ease;
-}
-
-.contact-box input:focus,
-.contact-box textarea:focus{
-    border:1px solid var(--accent);
-    box-shadow:0 0 12px var(--accent-soft);
-    outline:none;
-}
-
-.contact-box button{
-    margin-top:15px;
-    padding:12px 28px;
-    background:var(--accent);
-    border:none;
-    border-radius:30px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-
-.contact-box button:hover{
-    box-shadow:0 0 20px var(--accent-glow);
-}
-
-
-/* ==================================================
-   FOOTER DESIGN
-================================================== */
-footer{
-    background:#111;
-    padding:50px 20px 30px;
-    border-top:1px solid var(--border);
-}
-
-.footer-container{
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.footer-logo{
-    font-family:'Rubik Mono One', sans-serif;
-    font-size:1.3rem;
-}
-
-.footer-logo span{
-    background:var(--accent);
-    color:#000;
-    padding:3px 8px;
-    border-radius:4px;
-}
-
-.footer-links h4{
-    margin-bottom:15px;
-    color:var(--accent);
-}
-
-.footer-links ul{
-    list-style:none;
-}
-
-.footer-links ul li{
-    margin-bottom:10px;
-}
-
-.footer-links a{
-    text-decoration:none;
-    color:var(--text-light);
-    transition:0.3s;
-}
-
-.footer-links a:hover{
-    color:var(--accent);
-}
-
-.footer-bottom{
-    text-align:center;
-    margin-top:40px;
-    color:#777;
-    font-size:0.85rem;
-}
-
-
-/* ==================================================
-   SCROLL ANIMATION
-================================================== */
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-    transition:0.8s ease;
-}
-
-.reveal.active{
-    opacity:1;
-    transform:translateY(0);
-}
-
-
-/* ==================================================
-   RESPONSIVE DESIGN
-================================================== */
-@media(max-width:768px){
-
-    nav{
-        flex-direction:column;
-        gap:15px;
-        text-align:center;
-    }
-
-    nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    .hero{
-        padding:100px 15px 60px;
-    }
-
-    section{
-        padding:60px 15px;
-    }
-
-    .contact-box{
-        padding:25px;
-    }
-
-    footer{
-        text-align:center;
-    }
-}
-
-/* ===== FADE IN ANIMATION ===== */
-body {
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ==================================================
-   GALLERY SECTION (FIXED & CLEAN)
-================================================== */
-
-.gallery-section{
-    text-align:center;
-}
-
-.gallery-title{
-    font-family:'Rubik Mono One', sans-serif;
-    margin-bottom:40px;
-}
-
-/* Grid Layout */
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-/* Square Card */
-.gallery-card{
-    position:relative;
-    overflow:hidden;
-    border-radius:15px;
-    background:var(--card);
-    aspect-ratio:1 / 1;
-    cursor:pointer;
-    transition:0.4s ease;
-    border:1px solid var(--border);
-}
-
-/* Image Fit */
-.gallery-card img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:0.5s ease;
-}
-
-/* Hover Effects */
-.gallery-card:hover{
-    border:1px solid var(--accent);
-    box-shadow:0 0 25px var(--accent-glow);
-}
-
-.gallery-card:hover img{
-    transform:scale(1.08);
-}
-
-/* Overlay */
-.gallery-card::after{
-    content:"View Photo";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    padding:15px;
-    background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
-    color:#fff;
-    font-size:14px;
-    letter-spacing:1px;
-    opacity:0;
-    transition:0.4s ease;
-}
-
-.gallery-card:hover::after{
-    opacity:1;
-}
-
-/* ==================================================
-   HERO SPLIT DESIGN
-================================================== */
-
+/* ================= HERO SECTION ================= */
 .hero-section{
     min-height:90vh;
     display:flex;
@@ -431,7 +77,6 @@ body {
 
 .hero-left{
     flex:1;
-    animation:fadeLeft 1s ease forwards;
 }
 
 .hero-left h2{
@@ -441,11 +86,6 @@ body {
 
 .hero-left span{
     color:var(--accent);
-}
-
-.hero-left h3{
-    margin:15px 0;
-    color:var(--text-light);
 }
 
 .hero-left p{
@@ -469,12 +109,11 @@ body {
     box-shadow:0 0 25px var(--accent-glow);
 }
 
-/* PHOTO DESIGN */
+/* HERO IMAGE */
 .hero-right{
     flex:1;
     display:flex;
     justify-content:center;
-    animation:fadeRight 1s ease forwards;
 }
 
 .hero-right img{
@@ -490,19 +129,134 @@ body {
     transform:scale(1.05);
 }
 
-/* Animations */
-@keyframes fadeLeft{
-    from{opacity:0; transform:translateX(-40px);}
-    to{opacity:1; transform:translateX(0);}
+/* ================= GALLERY ================= */
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
-@keyframes fadeRight{
-    from{opacity:0; transform:translateX(40px);}
-    to{opacity:1; transform:translateX(0);}
+.gallery-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    background:var(--card);
+    aspect-ratio:1/1;
+    cursor:pointer;
+    border:1px solid var(--border);
+    transition:0.4s ease;
 }
 
-/* Responsive */
+.gallery-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s ease;
+}
+
+.gallery-card:hover{
+    border:1px solid var(--accent);
+    box-shadow:0 0 25px var(--accent-glow);
+}
+
+.gallery-card:hover img{
+    transform:scale(1.08);
+}
+
+/* ================= SIDE CONTACT PANEL ================= */
+.contact-panel{
+    position:fixed;
+    top:0;
+    right:-400px;
+    width:350px;
+    height:100vh;
+    background:#111;
+    padding:40px 25px;
+    box-shadow:-10px 0 30px #00000080;
+    transition:0.5s ease;
+    z-index:2000;
+    overflow-y:auto;
+}
+
+.contact-panel.active{
+    right:0;
+}
+
+.close-btn{
+    font-size:28px;
+    cursor:pointer;
+    float:right;
+}
+
+.contact-panel form input,
+.contact-panel form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#1a1a1a;
+    border:1px solid #333;
+    border-radius:8px;
+    color:#fff;
+}
+
+.contact-panel form button{
+    width:100%;
+    padding:12px;
+    background:var(--accent);
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.contact-panel form button:hover{
+    box-shadow:0 0 20px var(--accent-glow);
+}
+
+/* ================= SOCIAL LOGOS ================= */
+.social-logos{
+    display:flex;
+    justify-content:space-around;
+    margin-top:30px;
+}
+
+.social-logos img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    transition:0.3s ease;
+}
+
+.social-logos img:hover{
+    transform:scale(1.1);
+}
+
+/* ================= FADE IN ================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
 @media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
     .hero-section{
         flex-direction:column;
         text-align:center;

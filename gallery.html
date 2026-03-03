@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Waebby | Portfolio</title>
+<title>Waebby | Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,51 +23,76 @@
     <h1 class="gallery-title">Lagayan ng Alala</h1>
 
     <div class="gallery-grid">
+
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 1">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 1</h3>
+                <p>Best moment.</p>
+            </div>
         </div>
 
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 2">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 2</h3>
+                <p>Good vibes only.</p>
+            </div>
         </div>
 
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 3">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 3</h3>
+                <p>Unforgettable.</p>
+            </div>
         </div>
 
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 4">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 4</h3>
+                <p>Late night story.</p>
+            </div>
         </div>
 
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 5">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 5</h3>
+                <p>Simple happiness.</p>
+            </div>
         </div>
 
         <div class="gallery-card">
-            <img src="test1.jpeg" alt="Photo 6">
+            <img src="test1.jpeg" alt="">
+            <div class="gallery-overlay">
+                <h3>Memory 6</h3>
+                <p>Core memory.</p>
+            </div>
         </div>
+
     </div>
 </section>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-img" id="lightbox-img" alt="">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="">
 </div>
 
-<!-- SIDE CONTACT PANEL -->
+<!-- SIDE CONTACT PANEL (Same as index) -->
 <div class="contact-panel" id="contactPanel">
     <span class="close-btn" id="closeContact">&times;</span>
     <h2>Contact Me</h2>
-    
+
     <form action="mailto:villarealmarcosjoaquin44@gmail.com" method="POST" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
-    
-    <!-- CLICKABLE SOCIAL ICONS -->
+
     <div class="social-logos">
         <a href="https://www.facebook.com/share/1G99g8gYko/" target="_blank">
             <img src="images/facebook.png" alt="Facebook">
@@ -84,6 +109,7 @@
 </div>
 
 <script src="script.js"></script>
+
 
 </body>
 </html>

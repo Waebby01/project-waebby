@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    /* ================= CONTACT PANEL ================= */
+    /*CONTACT PANEL*/
     const openBtn = document.getElementById("openContact");
     const closeBtn = document.getElementById("closeContact");
     const panel = document.getElementById("contactPanel");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    /* ================= LIGHTBOX ================= */
+    /* LIGHTBOX */
     const cards = document.querySelectorAll(".gallery-card img");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
